@@ -11,7 +11,7 @@
     <body>
         <header>
             <nav>
-                <ul id="nav-bar" class="to-right">
+                <ul class="nav-bar to-right">
                     <li>Gmail</li>
                     <li>Grafika</li>
                     <li><i class="material-icons">apps</i></li>
@@ -20,18 +20,18 @@
                 </ul>
             </nav>
         </header>
-        <div>
-            <div>
+        <div id="main-container">
+            <div id="google-logo" class="container-item">
                 <img alt="Google" height="92" src="./Img/google_logo.png" width="272" />
             </div>
-            <div>
-                <input type="text" maxlength="2048" width="380" height="34"/>
-                <img alt="Keyboard" src="./Img/keyboard.png" />
-                <img alt="Microphone" src="./Img/microphone.png" />
+            <div id="input-text" class="container-item">
+                <input id="search" type="text" />
+                <i class="material-icons" id="keyb">keyboard</i>
+                <img id="mic" alt="Microphone" src="./Img/microphone.png" height="24" width="24"/>
             </div>
-            <div>
-                <button>Szukaj w Google</button>
-                <button>Szczęśliwy traf</button>
+            <div id="search-buttons" class="container-item">
+                <input type="submit" value="Szukaj w Google" aria-label="Szukaj w Google" />
+                <input type="submit" value="Szczęśliwy traf" aria-label="Szczęśliwy traf" />
             </div>
         </div>
         <footer>
