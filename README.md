@@ -9,5 +9,7 @@ It is simple imitation of [Google's Homepage](https://www.google.com "Google's H
 ### Regards
 
 Kind regards,
+
 Piotr Gretszel
+
 AGH UST
