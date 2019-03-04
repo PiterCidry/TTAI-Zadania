@@ -1,11 +1,13 @@
-## Welcome to GitHub Page of Zadanie 1 for TTAI classes.
+## Welcome to GitHub Page for "Techniki Tworzenia Aplikacji Internetowych" classes on AGH UST.
 
-It is just a test GitHubPage.
+It is just a test GitHubPage for now. I will develop it's content later on. 
 
-### Markdown
+### Zadanie 1
 
-## I love markdown, it is so fun to use.
+It is simple imitation of [Google's Homepage](https://www.google.com "Google's Homepage"). IT consists of html, css and js files. The imitation works best on Google Chrome newest browser.
 
 ### Regards
 
-It is great to have this GitHub Page.
+Kind regards,
+Piotr Gretszel
+AGH UST
