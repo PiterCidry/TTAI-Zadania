@@ -1,2 +1,3 @@
 Repozytorium z zadaniami: https://github.com/PiterCidry/TTAI-Zadania.git
+GitHub Pages: https://github.com/PiterCidry/TTAI-Zadania/blob/master/README.md
 Konto GitHub: https://github.com/PiterCidry
