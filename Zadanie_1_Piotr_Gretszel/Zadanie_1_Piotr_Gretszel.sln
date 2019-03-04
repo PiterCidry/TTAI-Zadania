@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Google_start_page_imitation.css = Google_start_page_imitation.css
 		Google_start_page_imitation.html = Google_start_page_imitation.html
+		Google_start_page_imitation.js = Google_start_page_imitation.js
+		Google_start_page_imitation_css_reset.css = Google_start_page_imitation_css_reset.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{072C3771-4DFA-4A23-BBEF-67C19DFB55F3}"

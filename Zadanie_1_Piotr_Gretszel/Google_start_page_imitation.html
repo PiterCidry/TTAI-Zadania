@@ -1,37 +1,37 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Google</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="./Google_start_page_imitation.css" rel="stylesheet" />
+    <link href="./Google_start_page_imitation_css_reset.css" rel="stylesheet" />
+    <script src="./Google_start_page_imitation.js" type="text/javascript"></script>
 </head>
     <body>
         <header>
-            <nav>
-                <ul class="nav-bar to-right">
-                    <li>Gmail</li>
-                    <li>Grafika</li>
-                    <li><i class="material-icons">apps</i></li>
-                    <li><i class="material-icons">notifications</i></li>
-                    <li><img alt="Konto" src="./Img/photo.jpg" height="29"/></li>
+            <nav id="top-menu">
+                <ul class="nav-bar">
+                    <li><a href="https://mail.google.com/mail" class="links">Gmail</a></li>
+                    <li><a class="links linkToBeDeveloped">Grafika</a></li>
+                    <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="material-icons" title="Aplikacje Google">apps</i></a></li>
+                    <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="material-icons" title="Powiadomienia z Google: 0">notifications</i></a></li>
+                    <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)"/></a></li>
                 </ul>
             </nav>
         </header>
         <div id="main-container">
-            <div id="google-logo" class="container-item">
-                <img alt="Google" height="92" src="./Img/google_logo.png" width="272" />
+            <div>
+                <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="92"  width="272" />
             </div>
-            <div id="input-text" class="container-item">
-                <input id="search" type="text" />
-                <i class="material-icons" id="keyb">keyboard</i>
-                <img id="mic" alt="Microphone" src="./Img/microphone.png" height="24" width="24"/>
+            <div id="input-text">
+                <input id="search" type="text" title="Szukaj" />
+                <i class="material-icons linkToBeDeveloped" id="keyb" title="Narzędzia do wprowadzania tekstu">keyboard</i>
+                <img id="mic" class="linkToBeDeveloped" alt="Microphone" src="./Img/microphone.png" height="24" width="24" title="Wyszukiwanie głosowe"/>
             </div>
-            <div id="search-buttons" class="container-item">
-                <input type="submit" value="Szukaj w Google" aria-label="Szukaj w Google" />
-                <input type="submit" value="Szczęśliwy traf" aria-label="Szczęśliwy traf" />
+            <div id="search-buttons">
+                <input type="submit" class="linkToBeDeveloped" value="Szukaj w Google" aria-label="Szukaj w Google" />
+                <input type="submit" id="lucky-luke" value="Szczęśliwy traf" aria-label="Szczęśliwy traf" />
             </div>
         </div>
         <footer>
@@ -41,15 +41,15 @@
                 </ul>
             </div>
             <div id="footer-bottom">
-                <ul class="to-left">
-                    <li>Reklamuj się</li>
-                    <li>Dla firm</li>
-                    <li>O nas</li>
+                <ul>
+                    <li><a href="https://ads.google.com/intl/pl_PL/home/" class="links" >Reklamuj się</a></li>
+                    <li><a href="https://www.google.com/services/#?modal_active=none" class="links" >Dla firm</a></li>
+                    <li><a href="https://about.google/intl/pl_pl/" class="links">O nas</a></li>
                 </ul>
-                <ul class="to-right">
-                    <li>Prywatność</li>
-                    <li>Warunki</li>
-                    <li>Ustawienia</li>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy?hl=pl&gl=pl" class="links">Prywatność</a></li>
+                    <li><a href="https://policies.google.com/terms?hl=pl&gl=pl" class="links">Warunki</a></li>
+                    <li><a href="https://www.google.com/preferences?hl=pl" class="links">Ustawienia</a></li>
                 </ul>
             </div>
         </footer>
