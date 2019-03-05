@@ -178,7 +178,7 @@ input[type="submit"] {
 }
 
 .links:visited {
-    color: inherit;
+    color: rgba(0,0,0,0.87);
 }
 
 i {
@@ -205,4 +205,8 @@ img#mic:hover {
 
 div#footer-bottom .links { /*FOR EDGE*/
     color: #5f6368;
+}
+
+nav#top-menu ul.nav-bar li:first-of-type a { /*FOR EDGE*/
+    color: rgba(0, 0, 0, 0.87) !important;
 }
