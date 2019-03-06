@@ -1,6 +1,7 @@
 window.onload = function () {
     var luckyButton = document.getElementById("lucky-luke");
     var linkToBeDeveloped = document.getElementsByClassName("linkToBeDeveloped");
+    var inputSearch = document.getElementById("search");
 
     if (luckyButton) {
         luckyButton.addEventListener("click", function () {
@@ -14,5 +15,29 @@ window.onload = function () {
                 alert('Functionality to be developed later.');
             });
         }
+    }
+
+    $("#search").focus(function () {
+        $("#input-text").addClass("border-outline");
+    });
+
+    $("#search").focusout(function () {
+        if (!$("#input-text").is(":hover")) {
+            $("#input-text").removeClass("border-outline");
+        }
+    });
+
+    $("#input-text").hover(function () {
+        $(this).addClass("border-outline");
+    });
+
+    $("#input-text").mouseleave(function () {
+        if (!$("#search").is(":focus")) {
+            $(this).removeClass("border-outline");
+        }
+    });
+
+    if (inputSearch) {
+        inputSearch.focus();
     }
 };

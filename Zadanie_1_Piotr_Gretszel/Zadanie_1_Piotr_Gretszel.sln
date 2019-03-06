@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{072C3771-4DF
 		Img\google_logo.png = Img\google_logo.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material-components", "Material-components", "{1C17CD6B-BB86-4CFD-AADE-11D77AE51EDF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Desktop\material-components-web.min.css = ..\..\..\..\..\..\Desktop\material-components-web.min.css
+		..\..\..\..\..\..\Desktop\material-components-web.min.js = ..\..\..\..\..\..\Desktop\material-components-web.min.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
