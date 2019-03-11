@@ -6,15 +6,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="./Google_start_page_imitation.css" rel="stylesheet" />
     <link href="./Google_start_page_imitation_css_reset.css" rel="stylesheet" />
+    <link href="./Material-components/material-components-web.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous" />
     <script src="./Google_start_page_imitation.js" type="text/javascript"></script>
+    <script src="./Material-components/material-components-web.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 </head>
     <body>
         <nav id="top-menu">
             <ul class="nav-bar">
                 <li><a href="https://mail.google.com/mail" class="links">Gmail</a></li>
                 <li><a class="links linkToBeDeveloped">Grafika</a></li>
-                <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="material-icons" title="Aplikacje Google">apps</i></a></li>
-                <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="material-icons" title="Powiadomienia z Google: 0">notifications</i></a></li>
+                <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="fas fa-th" title="Aplikacje Google"></i></a></li>
                 <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)"/></a></li>
             </ul>
         </nav>
@@ -23,13 +30,14 @@
                 <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="92"  width="272" />
             </div>
             <div id="input-text">
+                <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
                 <input id="search" type="text" title="Szukaj" />
-                <i class="material-icons linkToBeDeveloped" id="keyb" title="Narzędzia do wprowadzania tekstu">keyboard</i>
-                <img id="mic" class="linkToBeDeveloped" alt="Microphone" src="./Img/microphone.png" height="24" width="24" title="Wyszukiwanie głosowe"/>
+                <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
+                <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
             </div>
             <div id="search-buttons">
-                <input type="submit" class="linkToBeDeveloped" value="Szukaj w Google" aria-label="Szukaj w Google" />
-                <input type="submit" id="lucky-luke" value="Szczęśliwy traf" aria-label="Szczęśliwy traf" />
+                <button class="mdc-button mdc-button-gretszel linkToBeDeveloped">Szukaj w google</button>
+                <button class="mdc-button mdc-button-gretszel" id="lucky-luke" aria-label="Szczęśliwy traf">Szczęśliwy traf</button>
             </div>
         </div>
         <footer>
