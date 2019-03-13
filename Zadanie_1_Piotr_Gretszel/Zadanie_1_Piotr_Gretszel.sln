@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C83C0585-B122-4AEA-8776-AD7757ADD28D}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,6 +20,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material-components", "Mate
 	ProjectSection(SolutionItems) = preProject
 		Material-components\material-components-web.min.css = Material-components\material-components-web.min.css
 		Material-components\material-components-web.min.js = Material-components\material-components-web.min.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5121D83F-35E2-4057-AE48-F4009807AEDE}"
+	ProjectSection(SolutionItems) = preProject
+		Data\animals.js = Data\animals.js
+		Data\words.js = Data\words.js
 	EndProjectSection
 EndProject
 Global

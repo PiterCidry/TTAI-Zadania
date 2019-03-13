@@ -41,3 +41,10 @@ window.onload = function () {
         inputSearch.focus();
     }
 };
+
+var data = { inputContent: "" };
+
+var textData = new Vue({
+    el: '#main-container',
+    data: data
+});
