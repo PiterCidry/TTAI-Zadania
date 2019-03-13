@@ -53,7 +53,18 @@ Vue.component('div-autocompleter', {
         }
         return(xd);
     },
-    template: '<p>{{type}}: {{msg}} {{inputcontent}}</p>'
+    computed: {
+        results: function () {
+            let res = [];
+
+            for (let i = 0; i < this.inputcontent.length; i++) {
+                res.push(this.inputcontent);
+            }
+
+            return res;
+        }
+    },
+    template: '<p>{{type}}: {{msg}} {{inputcontent}} <span v-for="result in results">{{result}}</span></p>'
 });
 
 var data = {
