@@ -42,7 +42,24 @@ window.onload = function () {
     }
 };
 
-var data = { inputContent: "" };
+Vue.component('div-autocompleter', {
+    props: ['inputcontent', 'animalnames'],
+    data: function () {
+        var xd = {msg: "Hej!", type: "Powitanie"}
+        if (this.inputcontent) {
+            xd.msg = "Hejcia!";
+        } else {
+            xd.msg = "Spadaj!";
+        }
+        return(xd);
+    },
+    template: '<p>{{type}}: {{msg}} {{inputcontent}}</p>'
+});
+
+var data = {
+    inputContent: "",
+    animalNames: window.animals
+};
 
 var textData = new Vue({
     el: '#main-container',
