@@ -44,27 +44,27 @@ window.onload = function () {
 
 Vue.component('div-autocompleter', {
     props: ['inputcontent', 'animalnames'],
-    data: function () {
-        var xd = {msg: "Hej!", type: "Powitanie"}
-        if (this.inputcontent) {
-            xd.msg = "Hejcia!";
-        } else {
-            xd.msg = "Spadaj!";
-        }
-        return(xd);
-    },
     computed: {
         results: function () {
-            let res = [];
+            var results = [];
+            var names = this.animalnames;
+            var content = this.inputcontent;
 
-            for (let i = 0; i < this.inputcontent.length; i++) {
-                res.push(this.inputcontent);
+            for (var i = 0; i < names.length; i++) {
+                if (names[i].toLowerCase().startsWith(content.toLowerCase()) && content.length > 0) {
+                    results.push(names[i]);
+                }
             }
 
-            return res;
+            return results;
         }
     },
-    template: '<p>{{type}}: {{msg}} {{inputcontent}} <span v-for="result in results">{{result}}</span></p>'
+    template: '<div class="autocomplete"><ul class="autocomplete-results"><li class="autocomplete-result" v-for="result in results" @click="setResult(result);">{{result}}</li></ul></div>',
+    methods: {
+        setResult(result) {
+            document.getElementById("search").value = result;
+        }
+    }
 });
 
 var data = {
