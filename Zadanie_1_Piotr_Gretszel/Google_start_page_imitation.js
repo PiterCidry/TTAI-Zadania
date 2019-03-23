@@ -63,6 +63,7 @@ Vue.component('div-autocompleter', {
     methods: {
         setResult(result) {
             document.getElementById("search").value = result;
+            this.inputcontent = result;
         }
     }
 });
