@@ -1,12 +1,12 @@
 ﻿html {
-    margin: 0px;
+    margin: 0;
     height: 100%;
     width: 100%;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
     display: flex;
@@ -18,7 +18,7 @@ header {
     width: 100%;
 }
 
-nav#top-menu {
+#top-menu {
     color: rgba(0,0,0,0.87);
     display: grid;
     text-decoration: none;
@@ -41,11 +41,11 @@ nav#top-menu {
     padding-left: 0;
 }
 
-nav#top-menu ul.nav-bar li:first-of-type a { /*FOR EDGE*/
+#top-menu ul.nav-bar li:first-of-type a { /*FOR EDGE*/
     color: rgba(0, 0, 0, 0.87) !important;
 }
 
-img#my-face {
+#my-face {
     width: 70%;
     height: 70%;
 }
@@ -55,7 +55,7 @@ footer {
     flex-shrink: 0;
 }
 
-div#footer-top {
+#footer-top {
     color: rgba(0,0,0,.54);
     font-size: 15px;
     text-align: left;
@@ -66,7 +66,7 @@ div#footer-top {
     padding-left: 30px;
 }
 
-div#footer-bottom {
+#footer-bottom {
     color: #5f6368;
     font-family: Arial, sans-serif;
     line-height: 40px;
@@ -78,20 +78,20 @@ div#footer-bottom {
     margin-left: 3px;
 }
 
-div#footer-bottom ul {
+#footer-bottom ul {
     display: flex;
     flex-direction: row;
 }
 
-div#footer-bottom li {
+#footer-bottom li {
     padding-left: 27px;
 }
 
-div#footer-bottom .links { /*FOR EDGE*/
+#footer-bottom .links { /*FOR EDGE*/
     color: #5f6368;
 }
 
-div#main-container {
+#main-container {
     margin-top: -250px;
     align-content: flex-end;
     display: flex;
@@ -101,11 +101,11 @@ div#main-container {
     flex: 1 0 auto;
 }
 
-img#google-logo {
+#google-logo {
     margin-bottom: 25px;
 }
 
-div#input-text {
+#input-text {
     border-radius: 24px;
     border: 1px solid #dfe1e5;
     height: 44px;
@@ -116,7 +116,7 @@ div#input-text {
     align-items: center;
 }
 
-div#input-text a {
+#input-text a {
     padding-right: 17px;
     height: 100%;
     display: flex;
@@ -124,16 +124,16 @@ div#input-text a {
     text-decoration: none;
 }
 
-div#input-text a:first-of-type {
+#input-text a:first-of-type {
     padding-left: 17px;
 }
 
-div#input-text a i:hover {
+#input-text a i:hover {
     color: rgba(0,0,0,.54);
     text-decoration: none;
 }
 
-input#search {
+#search {
     word-wrap: break-word;
     outline: none;
     border: none;
@@ -146,7 +146,7 @@ input#search {
     margin-left: -10px;
 }
 
-div#search-buttons {
+#search-buttons {
     padding-top: 18px;
 }
 
@@ -190,7 +190,7 @@ input[type="submit"]:hover {
     padding: 0 16px;
     text-align: center;
     text-transform: none !important;
-    letter-spacing: 0px!important;
+    letter-spacing: 0!important;
     width: 130px;
 }
 
@@ -231,4 +231,34 @@ i:hover {
 
 .fa-th {
     font-size: 150%;
+}
+
+.autocomplete {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.autocomplete-results {
+    padding: 0;
+    margin: 18px 0 0 0;
+    border: 1px solid #eeeeee;
+    width: 330px;
+    height: 120px;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+}
+
+.autocomplete-result {
+    list-style: none;
+    text-align: left;
+    padding: 4px 2px;
+    cursor: pointer;
+}
+
+.autocomplete-result.is-active,
+.autocomplete-result:hover {
+    background-color: rgba(0, 0, 0, 0.33);
+    color: white;
 }

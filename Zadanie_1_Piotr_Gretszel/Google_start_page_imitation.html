@@ -24,12 +24,29 @@
             <div>
                 <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="92"  width="272" />
             </div>
-            <div id="input-text">
-                <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
-                <input id="search" type="text" title="Szukaj" v-model="inputContent"/>
-                <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
-                <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
+            <div id="app">
+                <autocomplete :items="window.animals" />
             </div>
+            <script type="text/x-template" id="autocomplete">
+                <div class="autocomplete">
+                    <div id="input-text">
+                        <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
+                        <input type="text" id="search" title="Szukaj" v-model="search" @input="onChange" @keyup.down="onArrowDown"
+                               @keyup.up="onArrowUp" @keyup.enter="onEnter" />
+                        <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
+                        <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
+                    </div>
+                    <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
+                        <li class="loading" v-if="isLoading">
+                            Loading results...
+                        </li>
+                        <li v-else v-for="(result, i) in results" :key="i" @click="setResult(result)" class="autocomplete-result"
+                            :class="{ 'is-active': i === arrowCounter }">
+                            {{ result }}
+                        </li>
+                    </ul>
+                </div>
+            </script>
             <div id="search-buttons">
                 <button class="mdc-button mdc-button-gretszel linkToBeDeveloped">Szukaj w google</button>
                 <button class="mdc-button mdc-button-gretszel" id="lucky-luke" aria-label="Szczęśliwy traf">Szczęśliwy traf</button>
