@@ -10,7 +10,7 @@ It is simple imitation of [Google's Homepage](https://www.google.com "Google's H
 
 Started working with Font Awesome, Material Design. Also added git tags for every classes version.
 
-### Zajecia 3
+### Zajecia 3 & 4
 
 Added autocompleter to input, started working with Vue.js
 
