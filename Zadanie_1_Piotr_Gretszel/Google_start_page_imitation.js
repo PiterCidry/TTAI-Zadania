@@ -42,38 +42,103 @@ window.onload = function () {
     }
 };
 
-Vue.component('div-autocompleter', {
-    props: ['inputcontent', 'animalnames'],
-    computed: {
-        results: function () {
-            var results = [];
-            var names = this.animalnames;
-            var content = this.inputcontent;
-
-            for (var i = 0; i < names.length; i++) {
-                if (names[i].toLowerCase().startsWith(content.toLowerCase()) && content.length > 0) {
-                    results.push(names[i]);
-                }
-            }
-
-            return results;
+const Autocomplete = {
+    name: "autocomplete",
+    template: "#autocomplete",
+    props: {
+        items: {
+            type: Array,
+            required: false,
+            default: () => []
+        },
+        isAsync: {
+            type: Boolean,
+            required: false,
+            default: false
         }
     },
-    template: '<div class="autocomplete"><ul class="autocomplete-results"><li class="autocomplete-result" v-for="result in results" @click="setResult(result);">{{result}}</li></ul></div>',
-    methods: {
-        setResult(result) {
-            document.getElementById("search").value = result;
-            this.inputcontent = result;
-        }
-    }
-});
 
-var data = {
-    inputContent: "",
-    animalNames: window.animals
+    data() {
+        return {
+            isOpen: false,
+            results: [],
+            search: "",
+            isLoading: false,
+            arrowCounter: 0
+        };
+    },
+
+    methods: {
+        onChange() {
+            this.$emit("input", this.search);
+
+            if (this.isAsync) {
+                this.isLoading = true;
+            } else {
+                this.filterResults();
+                this.isOpen = true;
+            }
+        },
+
+        filterResults() {
+            this.results = this.items.filter(item => {
+                return item.toLowerCase().startsWith(this.search.toLowerCase());
+            });
+        },
+
+        setResult(result) {
+            this.search = result;
+            this.isOpen = false;
+        },
+
+        onArrowDown(evt) {
+            if (this.arrowCounter < this.results.length) {
+                this.arrowCounter++;
+            }
+        },
+
+        onArrowUp() {
+            if (this.arrowCounter > 0) {
+                this.arrowCounter--;
+            }
+        },
+
+        onEnter() {
+            this.search = this.results[this.arrowCounter];
+            this.isOpen = false;
+            this.arrowCounter = -1;
+        },
+
+        handleClickOutside(evt) {
+            if (!this.$el.contains(evt.target)) {
+                this.isOpen = false;
+                this.arrowCounter = -1;
+            }
+        }
+    },
+
+    watch: {
+        items: function (val, oldValue) {
+            if (val.length !== oldValue.length) {
+                this.results = val;
+                this.isLoading = false;
+            }
+        }
+    },
+
+    mounted() {
+        document.addEventListener("click", this.handleClickOutside);
+    },
+
+    destroyed() {
+        document.removeEventListener("click", this.handleClickOutside);
+    }
 };
 
-var textData = new Vue({
-    el: '#main-container',
-    data: data
+new Vue({
+    el: "#app",
+    name: "app",
+    components: {
+        autocomplete: Autocomplete
+    }
 });

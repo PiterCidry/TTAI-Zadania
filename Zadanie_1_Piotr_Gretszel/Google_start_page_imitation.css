@@ -235,7 +235,7 @@ i:hover {
 
 .autocomplete {
     position: relative;
-    width: 230px;
+    width: 330px;
 }
 
 .autocomplete-results {
@@ -244,6 +244,7 @@ i:hover {
     border: 1px solid #eeeeee;
     height: 120px;
     overflow: auto;
+    font-family: Arial, sans-serif;
 }
 
 .autocomplete-result {
@@ -253,7 +254,8 @@ i:hover {
     cursor: pointer;
 }
 
+.autocomplete-result.is-active,
 .autocomplete-result:hover {
-    background-color: rgba(0, 0, 0, 0.54);
+    background-color: rgba(0, 0, 0, 0.33);
     color: white;
 }
