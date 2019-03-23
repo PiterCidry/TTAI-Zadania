@@ -41,38 +41,3 @@ window.onload = function () {
         inputSearch.focus();
     }
 };
-
-Vue.component('div-autocompleter', {
-    props: ['inputcontent', 'animalnames'],
-    computed: {
-        results: function () {
-            var results = [];
-            var names = this.animalnames;
-            var content = this.inputcontent;
-
-            for (var i = 0; i < names.length; i++) {
-                if (names[i].toLowerCase().startsWith(content.toLowerCase()) && content.length > 0) {
-                    results.push(names[i]);
-                }
-            }
-
-            return results;
-        }
-    },
-    template: '<div class="autocomplete"><ul class="autocomplete-results"><li class="autocomplete-result" v-for="result in results" @click="setResult(result);">{{result}}</li></ul></div>',
-    methods: {
-        setResult(result) {
-            document.getElementById("search").value = result;
-        }
-    }
-});
-
-var data = {
-    inputContent: "",
-    animalNames: window.animals
-};
-
-var textData = new Vue({
-    el: '#main-container',
-    data: data
-});
