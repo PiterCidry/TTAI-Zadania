@@ -12,7 +12,7 @@ Started working with Font Awesome, Material Design. Also added git tags for ever
 
 ### Zajecia 3 & 4
 
-Added autocompleter to input, started working with Vue.js
+Added autocompleter to input, started working with Vue.js. Also renamed solution.
 
 ### Regards
 
