@@ -51,6 +51,7 @@ const Autocomplete = {
             required: false,
             default: () => []
         },
+
         isAsync: {
             type: Boolean,
             required: false,
@@ -77,6 +78,10 @@ const Autocomplete = {
             } else {
                 this.filterResults();
                 this.isOpen = true;
+            }
+
+            if (this.search.length < 1 || this.results.length < 1) {
+                this.isOpen = false;
             }
         },
 
