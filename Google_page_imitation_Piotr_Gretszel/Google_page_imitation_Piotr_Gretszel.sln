@@ -1,14 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C83C0585-B122-4AEA-8776-AD7757ADD28D}"
 	ProjectSection(SolutionItems) = preProject
+		css_reset.css = css_reset.css
+		Google_results_page.css = Google_results_page.css
+		Google_results_page.html = Google_results_page.html
 		Google_start_page_imitation.css = Google_start_page_imitation.css
 		Google_start_page_imitation.html = Google_start_page_imitation.html
 		Google_start_page_imitation.js = Google_start_page_imitation.js
-		Google_start_page_imitation_css_reset.css = Google_start_page_imitation_css_reset.css
+		shared.css = shared.css
+		shared.js = shared.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{072C3771-4DFA-4A23-BBEF-67C19DFB55F3}"

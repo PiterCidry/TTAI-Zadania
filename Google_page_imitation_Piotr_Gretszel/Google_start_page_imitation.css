@@ -1,176 +1,20 @@
-﻿html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-header {
-    width: 100%;
-}
-
-#top-menu {
+﻿#top-menu {
     color: rgba(0,0,0,0.87);
-    display: grid;
-    text-decoration: none;
     line-height: 24px;
-    outline: none;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
     justify-content: flex-end;
     margin-top: 3px;
-    margin-right: 3px;
-}
-
-.nav-bar li {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 11px;
-}
-
-.nav-bar li:first-of-type {
-    padding-left: 0;
-}
-
-#top-menu ul.nav-bar li:first-of-type a { /*FOR EDGE*/
-    color: rgba(0, 0, 0, 0.87) !important;
-}
-
-#my-face {
-    width: 70%;
-    height: 70%;
-}
-
-footer {
-    background: #f2f2f2;
-    flex-shrink: 0;
-}
-
-#footer-top {
-    color: rgba(0,0,0,.54);
-    font-size: 15px;
-    text-align: left;
-    line-height: 40px;
-    font-family: Arial, sans-serif;
-    border-bottom: 1px solid #e4e4e4;
-    border-top: 1px solid #e4e4e4;
-    padding-left: 30px;
-}
-
-#footer-bottom {
-    color: #5f6368;
-    font-family: Arial, sans-serif;
-    line-height: 40px;
-    font-size: small;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 30px;
-    margin-left: 3px;
-}
-
-#footer-bottom ul {
-    display: flex;
-    flex-direction: row;
-}
-
-#footer-bottom li {
-    padding-left: 27px;
-}
-
-#footer-bottom .links { /*FOR EDGE*/
-    color: #5f6368;
 }
 
 #main-container {
-    margin-top: -250px;
-    align-content: flex-end;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1 0 auto;
+    padding-top: 8%;
 }
 
 #google-logo {
     margin-bottom: 25px;
 }
 
-#input-text {
-    border-radius: 24px;
-    border: 1px solid #dfe1e5;
-    height: 44px;
-    margin: 0 auto;
-    font-size: small;
-    width: 584px;
-    display: flex;
-    align-items: center;
-}
-
-#input-text a {
-    padding-right: 17px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-#input-text a:first-of-type {
-    padding-left: 17px;
-}
-
-#input-text a i:hover {
-    color: rgba(0,0,0,.54);
-    text-decoration: none;
-}
-
-#search {
-    word-wrap: break-word;
-    outline: none;
-    border: none;
-    font: 16px arial, sans-serif;
-    line-height: 34px;
-    height: 34px;
-    width: 480px;
-    padding-top: 6px;
-    border-radius: 4px;
-    margin-left: -10px;
-}
-
 #search-buttons {
     padding-top: 18px;
-}
-
-input[type="submit"] {
-    height: 36px;
-    line-height: 27px;
-    background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    border-radius: 4px;
-    color: #5F6368;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 11px 4px;
-    min-width: 54px;
-    padding: 0 16px;
-    text-align: center;
-}
-
-input[type="submit"]:hover {
-    border: 1px solid lightgray;
-    color: rgba(0,0,0,.88);
 }
 
 .mdc-button-gretszel {
@@ -199,20 +43,8 @@ input[type="submit"]:hover {
     color: rgba(0,0,0,.88) !important;
 }
 
-i {
-    color: rgba(0,0,0,.54);
-}
-
-i:hover {
-    color: rgba(0,0,0,.88);
-}
-
-.border-outline {
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.links {
-    text-decoration: none;
+.fa-th {
+    font-size: 150%;
 }
 
 .links:hover {
@@ -221,44 +53,10 @@ i:hover {
     color: dimgray !important;
 }
 
-.links:visited {
-    color: rgba(0,0,0,0.87);
+i {
+    color: rgba(0,0,0,.54);
 }
 
-.middle-icon {
-    padding-top: 5px;
-}
-
-.fa-th {
-    font-size: 150%;
-}
-
-.autocomplete {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.autocomplete-results {
-    padding: 0;
-    margin: 18px 0 0 0;
-    border: 1px solid #eeeeee;
-    width: 330px;
-    height: 120px;
-    overflow: auto;
-    font-family: Arial, sans-serif;
-}
-
-.autocomplete-result {
-    list-style: none;
-    text-align: left;
-    padding: 4px 2px;
-    cursor: pointer;
-}
-
-.autocomplete-result.is-active,
-.autocomplete-result:hover {
-    background-color: rgba(0, 0, 0, 0.33);
-    color: white;
+i:hover {
+    color: rgba(0,0,0,.88);
 }

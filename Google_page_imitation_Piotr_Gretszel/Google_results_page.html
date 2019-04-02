@@ -2,31 +2,22 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Google</title>
+    <title>Szukaj w Google</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="./Material-components/material-components-web.min.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous" />
-    <link href="./Google_start_page_imitation.css" rel="stylesheet" />
+    <link href="./Google_results_page.css" rel="stylesheet" />
     <link href="./css_reset.css" rel="stylesheet" />
     <link href="./shared.css" rel="stylesheet" />
 </head>
 <body>
-    <nav id="top-menu">
-        <ul class="nav-bar">
-            <li><a href="https://mail.google.com/mail" class="links">Gmail</a></li>
-            <li><a class="links linkToBeDeveloped">Grafika</a></li>
-            <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="fas fa-th" title="Aplikacje Google"></i></a></li>
-            <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)" /></a></li>
-        </ul>
-    </nav>
-    <div id="main-container">
-        <div>
-            <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="92" width="272" />
-        </div>
+<div id="sticky">
+    <div id="sticky-front">
+        <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="30" width="92"/>
         <div id="app">
-            <autocomplete :items="window.animals" />
+            <autocomplete :items="window.animals"/>
         </div>
         <script type="text/x-template" id="autocomplete">
             <div class="autocomplete">
@@ -48,27 +39,47 @@
                 </ul>
             </div>
         </script>
-        <div id="search-buttons">
-            <button class="mdc-button mdc-button-gretszel linkToBeDeveloped">Szukaj w google</button>
-            <button class="mdc-button mdc-button-gretszel" id="lucky-luke" aria-label="Szczęśliwy traf">Szczęśliwy traf</button>
-        </div>
+    </div>
+    <div id="sticky-end">
+        <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="fas fa-th" title="Aplikacje Google"></i></a></li>
+        <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)" /></a></li>
+    </div>
+</div>
+    <nav id="top-menu">
+        <ul class="nav-bar">
+            <li>Wszystko</li>
+            <li>Wiadomości</li>
+            <li>Grafika</li>
+            <li>Zakupy</li>
+            <li>Filmy</li>
+            <li>Więcej</li>
+            <li>Ustawienia</li>
+            <li>Narzędzia</li>
+        </ul>
+    </nav>
+    <div id="main-container">
+
     </div>
     <footer>
         <div id="footer-top">
-            <ul>
-                <li>Polska</li>
-            </ul>
+            <span>Polska</span>
+            <div id="footer-bottom-top-right" class="footer-bottom-text">
+                <span><i class="fas fa-circle" style="font-size: 70%;"></i></span>
+                <span class="text-bold">Prądnik Biały, Kraków</span>
+                <span class="text-black"> - </span>
+                <span> Z Twojej historii wyszukiwania</span>
+                <span class="text-black"> - </span>
+                <a class="links linkToBeDeveloped">Użyj dokładnej lokalizacji</a>
+                <span class="text-black"> - </span>
+                <a class="links" href="https://support.google.com/websearch/answer/179386?p=ws_settings_location&hl=pl&visit_id=636898336336039936-1433983238&rd=1"> Dowiedz się więcej </a>
+            </div>
         </div>
         <div id="footer-bottom">
-            <ul>
-                <li><a href="https://ads.google.com/intl/pl_PL/home/" class="links footer-bottom-text">Reklamuj się</a></li>
-                <li><a href="https://www.google.com/services/#?modal_active=none" class="links footer-bottom-text">Dla firm</a></li>
-                <li><a href="https://about.google/intl/pl_pl/" class="links footer-bottom-text">O nas</a></li>
-            </ul>
-            <ul>
-                <li><a href="https://policies.google.com/privacy?hl=pl&gl=pl" class="links footer-bottom-text">Prywatność</a></li>
-                <li><a href="https://policies.google.com/terms?hl=pl&gl=pl" class="links footer-bottom-text">Warunki</a></li>
-                <li><a href="https://www.google.com/preferences?hl=pl" class="links footer-bottom-text">Ustawienia</a></li>
+            <ul class="footer-bottom-text">
+                <li><a href="https://support.google.com/websearch/?visit_id=636898336336039936-1433983238&hl=pl&rd=2#topic=3378866" class="links">Pomoc</a></li>
+                <li><a class="links linkToBeDeveloped">Prześlij opinię</a></li>
+                <li><a href="https://policies.google.com/privacy?hl=pl&gl=pl" class="links">Prywatność</a></li>
+                <li><a href="https://policies.google.com/terms?hl=pl&gl=pl" class="links">Warunki</a></li>
             </ul>
         </div>
     </footer>
@@ -79,7 +90,6 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
     <script src="./Material-components/material-components-web.min.js" type="text/javascript"></script>
-    <script src="./Google_start_page_imitation.js" type="text/javascript"></script>
     <script src="./shared.js" type="text/javascript"></script>
 </body>
 </html>
