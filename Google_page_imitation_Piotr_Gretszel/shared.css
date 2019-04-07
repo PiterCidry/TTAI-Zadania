@@ -15,7 +15,6 @@ body {
 }
 
 #top-menu {
-    display: grid;
     text-decoration: none;
     outline: none;
     font-size: 13px;
@@ -26,11 +25,6 @@ body {
 .nav-bar li {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 11px;
-}
-
-.nav-bar li:first-of-type {
-    padding-left: 0;
 }
 
 .middle-icon {
@@ -79,7 +73,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 30px;
-    margin-left: 3px;
 }
 
 #footer-bottom ul {
@@ -118,7 +111,6 @@ footer {
      height: 44px;
      margin: 0 auto;
      font-size: small;
-     width: 584px;
      display: flex;
      align-items: center;
  }
@@ -147,7 +139,6 @@ footer {
     font: 16px arial, sans-serif;
     line-height: 34px;
     height: 34px;
-    width: 480px;
     padding-top: 6px;
     border-radius: 4px;
     margin-left: 17px;

@@ -1,4 +1,5 @@
 ﻿#top-menu {
+    display: grid;
     color: rgba(0,0,0,0.87);
     line-height: 24px;
     justify-content: flex-end;
@@ -17,6 +18,18 @@
     padding-top: 18px;
 }
 
+#footer-bottom {
+    margin-left: 3px;
+}
+
+#input-text {
+    width: 584px;
+}
+
+#search {
+    width: 480px;
+}
+
 .mdc-button-gretszel {
     height: 36px;
     line-height: 27px;
@@ -31,7 +44,6 @@
     font-weight: normal;
     margin: 11px 4px;
     min-width: 54px;
-    padding: 0 16px;
     text-align: center;
     text-transform: none !important;
     letter-spacing: 0!important;
@@ -59,4 +71,12 @@ i {
 
 i:hover {
     color: rgba(0,0,0,.88);
+}
+
+.nav-bar li {
+    padding-left: 11px;
+}
+
+.nav-bar li:first-of-type {
+    padding-left: 0;
 }
