@@ -18,9 +18,17 @@
     padding-top: 18px;
 }
 
+#footer-top {
+    padding-left: 30px;
+}
+
 #footer-bottom {
     margin-left: 3px;
 }
+
+    #footer-bottom li {
+        padding-left: 27px;
+    }
 
 #input-text {
     width: 584px;
@@ -46,37 +54,39 @@
     min-width: 54px;
     text-align: center;
     text-transform: none !important;
-    letter-spacing: 0!important;
+    letter-spacing: 0 !important;
     width: 130px;
 }
 
-.mdc-button-gretszel:hover {
-    border: 1px solid lightgray;
-    color: rgba(0,0,0,.88) !important;
-}
+    .mdc-button-gretszel:hover {
+        border: 1px solid lightgray;
+        color: rgba(0,0,0,.88) !important;
+    }
 
 .fa-th {
     font-size: 150%;
 }
 
-.links:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: dimgray !important;
+.links {
+    color: rgba(0, 0, 0, .87);
 }
+
+    .links:hover {
+        text-decoration: underline;
+    }
 
 i {
     color: rgba(0,0,0,.54);
 }
 
-i:hover {
-    color: rgba(0,0,0,.88);
-}
+    i:hover {
+        color: rgba(0,0,0,.88);
+    }
 
 .nav-bar li {
     padding-left: 11px;
 }
 
-.nav-bar li:first-of-type {
-    padding-left: 0;
-}
+    .nav-bar li:first-of-type {
+        padding-left: 0;
+    }

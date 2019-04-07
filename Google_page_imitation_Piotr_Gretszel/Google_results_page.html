@@ -13,52 +13,66 @@
     <link href="./shared.css" rel="stylesheet" />
 </head>
 <body>
-<div id="sticky">
-    <div id="sticky-front">
-        <img id="google-logo" alt="Google" src="./Img/google_logo.png" height="30" width="92"/>
-        <div id="app">
-            <autocomplete :items="window.animals"/>
-        </div>
-        <script type="text/x-template" id="autocomplete">
-            <div class="autocomplete">
-                <div id="input-text">
-                    <input type="text" id="search" title="Szukaj" v-model="search" @input="onChange" @keyup.down="onArrowDown"
-                           @keyup.up="onArrowUp" @keyup.enter="onEnter" />
-                    <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
-                    <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
-                    <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
-                </div>
-                <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
-                    <li class="loading" v-if="isLoading">
-                        Loading results...
-                    </li>
-                    <li v-else v-for="(result, i) in results" :key="i" @click="setResult(result)" class="autocomplete-result"
-                        :class="{ 'is-active': i === arrowCounter }">
-                        {{ result }}
-                    </li>
-                </ul>
+    <div id="sticky">
+        <div id="sticky-front">
+            <img id="google-logo" onclick="goToMainPage();" alt="Przejdź do strony głównej Google" src="./Img/google_logo.png" height="30" width="92" title="Przejdź do strony głównej Google" />
+            <div id="app">
+                <autocomplete :items="window.animals" />
             </div>
-        </script>
+            <script type="text/x-template" id="autocomplete">
+                <div class="autocomplete">
+                    <div id="input-text">
+                        <input type="text" id="search" title="Szukaj" v-model="search" @input="onChange" @keyup.down="onArrowDown"
+                               @keyup.up="onArrowUp" @keyup.enter="onEnter" />
+                        <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
+                        <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
+                        <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
+                    </div>
+                    <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
+                        <li class="loading" v-if="isLoading">
+                            Loading results...
+                        </li>
+                        <li v-else v-for="(result, i) in results" :key="i" @click="setResult(result)" class="autocomplete-result"
+                            :class="{ 'is-active': i === arrowCounter }">
+                            {{ result }}
+                        </li>
+                    </ul>
+                </div>
+            </script>
+        </div>
+        <div id="sticky-end">
+            <ul class="nav-bar">
+                <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="fas fa-th" title="Aplikacje Google"></i></a></li>
+                <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)" /></a></li>
+            </ul>
+        </div>
     </div>
-    <div id="sticky-end">
-        <ul class="nav-bar">
-            <li class="middle-icon"><a class="links linkToBeDeveloped"><i class="fas fa-th" title="Aplikacje Google"></i></a></li>
-            <li class="middle-icon"><a class="links linkToBeDeveloped"><img id="my-face" alt="Konto" src="./Img/photo.jpg" title="Konto Google: Piotr Gretszel&#013;(piotr.gretszel@gmail.com)"/></a></li>
-        </ul>
-    </div>
-</div>
     <nav id="top-menu">
         <ul class="categories-bar nav-bar">
-            <div class="category-active">
-                <li>Wszystko</li>
-            </div>
-            <li>Wiadomości</li>
-            <li>Grafika</li>
-            <li>Zakupy</li>
-            <li>Filmy</li>
-            <li>Więcej</li>
-            <li>Ustawienia</li>
-            <li>Narzędzia</li>
+            <li class="category-active links">
+                <span>Wszystko</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Wiadomości</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Grafika</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Zakupy</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Filmy</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Więcej</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Ustawienia</span>
+            </li>
+            <li class="category-inactive links">
+                <span>Narzędzia</span>
+            </li>
         </ul>
     </nav>
     <div id="main-container">
@@ -67,13 +81,13 @@
         <div id="footer-top">
             <span>Polska</span>
             <div id="footer-bottom-top-right" class="footer-bottom-text">
-                <span><i class="fas fa-circle" style="font-size: 70%;"></i></span>
+                <span><i class="fas fa-circle" style="font-size: 70%;">&nbsp;</i></span>
                 <span class="text-bold">Prądnik Biały, Kraków</span>
-                <span class="text-black"> - </span>
+                <span class="text-black">&nbsp;-&nbsp;</span>
                 <span> Z Twojej historii wyszukiwania</span>
-                <span class="text-black"> - </span>
+                <span class="text-black">&nbsp;-&nbsp;</span>
                 <a class="links linkToBeDeveloped">Użyj dokładnej lokalizacji</a>
-                <span class="text-black"> - </span>
+                <span class="text-black">&nbsp;-&nbsp;</span>
                 <a class="links" href="https://support.google.com/websearch/answer/179386?p=ws_settings_location&hl=pl&visit_id=636898336336039936-1433983238&rd=1"> Dowiedz się więcej </a>
             </div>
         </div>
@@ -88,7 +102,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./Data/animals.js" type="text/javascript"></script>
-    <script src="./Data/words.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>

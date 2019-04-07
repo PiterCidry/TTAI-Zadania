@@ -1,16 +1,20 @@
-﻿.links:hover {
-    cursor: pointer;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.88) !important;
-}
-
-.links:visited {
+﻿.links {
     color: #5f6368;
 }
+
+    .links:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.87) !important;
+    }
 
 i {
     color: rgba(0, 0, 0, 0.54);
 }
+
+    i:hover {
+        color: rgba(0,0,0,.87);
+    }
 
 .categories-bar {
     display: flex;
@@ -20,25 +24,29 @@ i {
     height: 55px;
 }
 
-.categories-bar li {
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top: 11px;
-}
+    .categories-bar li {
+        padding-left: 17px;
+        padding-right: 17px;
+        height: 100%;
+    }
 
-.categories-bar li:first-of-type {
-    padding-left: 20px;
-}
+        .categories-bar li:first-of-type {
+            padding-left: 20px;
+        }
 
 .category-active {
     height: 100%;
     font-weight: bolder;
     color: #1A73E8;
     border-bottom: 3px solid #1A73E8;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+}
+
+    .category-active span, .category-inactive span {
+        line-height: 58px;
+    }
+
+.category-inactive {
+    height: 100%;
 }
 
 .middle-icon {
@@ -56,6 +64,10 @@ i {
     height: 25px;
 }
 
+    #footer-bottom-top-right i {
+        color: rgba(0, 0, 0, .33);
+    }
+
 #top-menu {
     color: #777;
     border-bottom: 1px solid #e4e4e4;
@@ -64,7 +76,7 @@ i {
     justify-content: flex-start;
     display: flex;
     align-items: center;
-    padding-left: 152px;
+    padding-left: 150px;
 }
 
 #input-text {
@@ -75,9 +87,17 @@ i {
     width: 506px;
 }
 
-#footer-top, #footer-bootom {
-    margin-left: 152px;
+#footer-top, #footer-bottom {
+    padding-left: 170px;
 }
+
+    #footer-bottom li {
+        padding-left: 27px;
+    }
+
+        #footer-bottom li:first-of-type {
+            padding-left: 0;
+        }
 
 #sticky {
     height: 66px;
@@ -85,13 +105,13 @@ i {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    margin-left: 30px;
 }
 
 #sticky-front {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 30px;
 }
 
 #sticky-end {
@@ -102,4 +122,8 @@ i {
 
 #app {
     margin-left: 30px;
+}
+
+#google-logo {
+    cursor: pointer;
 }

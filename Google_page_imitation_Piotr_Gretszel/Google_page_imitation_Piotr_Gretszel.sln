@@ -10,7 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Google_results_page.html = Google_results_page.html
 		Google_start_page_imitation.css = Google_start_page_imitation.css
 		Google_start_page_imitation.html = Google_start_page_imitation.html
-		Google_start_page_imitation.js = Google_start_page_imitation.js
 		shared.css = shared.css
 		shared.js = shared.js
 	EndProjectSection
@@ -29,7 +28,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5121D83F-35E2-4057-AE48-F4009807AEDE}"
 	ProjectSection(SolutionItems) = preProject
 		Data\animals.js = Data\animals.js
-		Data\words.js = Data\words.js
 	EndProjectSection
 EndProject
 Global
