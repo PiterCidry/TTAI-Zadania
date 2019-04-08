@@ -1,4 +1,48 @@
-﻿.links {
+﻿#sticky {
+    height: 66px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+#sticky-front {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#google-logo {
+    cursor: pointer;
+}
+
+#app {
+    margin-left: 30px;
+}
+
+.autocomplete-results {
+    margin: 45px 0 0 -37px;
+    width: 520px;
+}
+
+#input-text {
+    width: 630px;
+}
+
+#search {
+    width: 506px;
+}
+
+i {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+    i:hover {
+        color: rgba(0,0,0,.87);
+    }
+
+.links {
     color: #5f6368;
 }
 
@@ -8,13 +52,26 @@
         color: rgba(0, 0, 0, 0.87) !important;
     }
 
-i {
-    color: rgba(0, 0, 0, 0.54);
+#sticky-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-    i:hover {
-        color: rgba(0,0,0,.87);
-    }
+.middle-icon {
+    padding-left: 11px;
+}
+
+#top-menu {
+    color: #777;
+    border-bottom: 1px solid #e4e4e4;
+    line-height: 15px;
+    height: 58px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
 
 .categories-bar {
     display: flex;
@@ -49,9 +106,77 @@ i {
     height: 100%;
 }
 
-.middle-icon {
-    padding-left: 11px;
+#main-container {
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+.results-counter {
+    line-height: 43px;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 170px;
+}
+
+.search-results {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 170px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.search-result {
+    margin-bottom: 30px;
+}
+
+.links-results {
+    color: #1a0dab;
+}
+
+    .links-results:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.links-results-small {
+    line-height: 1.54;
+    font-size: smaller;
+}
+
+.links-results-big {
+    line-height: 1.33;
+    font-size: 18px;
+}
+
+.search-result ul li:nth-of-type(2) {
+    line-height: 23px;
+    font-size: 15px;
+    color: #006621;
+}
+
+.search-result ul li:nth-of-type(3) {
+    line-height: 1.54;
+    word-wrap: break-word;
+    font-size: small;
+    color: #545454;
+}
+
+#footer-top, #footer-bottom {
+    padding-left: 170px;
+}
+
+    #footer-bottom li {
+        padding-left: 27px;
+    }
+
+        #footer-bottom li:first-of-type {
+            padding-left: 0;
+        }
 
 #footer-bottom-top-right {
     display: flex;
@@ -68,62 +193,10 @@ i {
         color: rgba(0, 0, 0, .33);
     }
 
-#top-menu {
-    color: #777;
-    border-bottom: 1px solid #e4e4e4;
-    line-height: 15px;
-    height: 58px;
-    justify-content: flex-start;
-    display: flex;
-    align-items: center;
-    padding-left: 150px;
-}
-
-#input-text {
-    width: 630px;
-}
-
-#search {
-    width: 506px;
-}
-
-#footer-top, #footer-bottom {
-    padding-left: 170px;
-}
-
-    #footer-bottom li {
-        padding-left: 27px;
-    }
-
-        #footer-bottom li:first-of-type {
-            padding-left: 0;
-        }
-
-#sticky {
-    height: 66px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-left: 30px;
-}
-
-#sticky-front {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-#sticky-end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-#app {
-    margin-left: 30px;
-}
-
-#google-logo {
+.imitate-button {
+    border: 1px solid gray;
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    background-color: #f2f2f2;
+    color: #5F6368;
     cursor: pointer;
 }

@@ -35,7 +35,7 @@
                            @keyup.up="onArrowUp" @keyup.enter="onEnter" />
                     <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
                     <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
-                    <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
+                    <a class="links searchButton" title="Szukaj"><i class="fas fa-search"></i></a>
                 </div>
                 <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
                     <li class="loading" v-if="isLoading">
@@ -49,7 +49,7 @@
             </div>
         </script>
         <div id="search-buttons">
-            <button class="mdc-button mdc-button-gretszel linkToBeDeveloped">Szukaj w google</button>
+            <button class="mdc-button mdc-button-gretszel searchButton">Szukaj w google</button>
             <button class="mdc-button mdc-button-gretszel" id="lucky-luke" aria-label="Szczęśliwy traf">Szczęśliwy traf</button>
         </div>
     </div>

@@ -26,7 +26,7 @@
                                @keyup.up="onArrowUp" @keyup.enter="onEnter" />
                         <a class="links linkToBeDeveloped" title="Narzędzia do wprowadzania tekstu"><i class="fas fa-keyboard"></i></a>
                         <a class="links linkToBeDeveloped" title="Wyszukiwanie głosowe"><i class="fas fa-microphone"></i></a>
-                        <a class="links linkToBeDeveloped" title="Szukaj"><i class="fas fa-search"></i></a>
+                        <a class="links searchButton" title="Szukaj"><i class="fas fa-search"></i></a>
                     </div>
                     <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
                         <li class="loading" v-if="isLoading">
@@ -71,11 +71,32 @@
                 <span>Ustawienia</span>
             </li>
             <li class="category-inactive links">
-                <span>Narzędzia</span>
+                <span id="toolsButton" class="linkToBeDeveloped">Narzędzia</span>
             </li>
         </ul>
     </nav>
     <div id="main-container">
+        <div class="results-counter">
+            <span>Około 242 000 000 wyników (0,35 s)</span>
+        </div>
+        <div class="search-results">
+            <div class="search-result">
+                <ul>
+                    <li class="links-results links-results-big linkToBeDeveloped">Scacciarla sospettoso trascinato uno cambieremo ape incontrato era cancellato</li>
+                    <li>https://www.sconvoltoriconosco.com/pl-pl/ <span class="linkToBeDeveloped">&#9662;</span></li>
+                    <li>Incontrato pensieroso ti tu la ingannaste. Osi intere riluce lancio rimase sfonda hai dal. Mia scarabei chiedete che duchessa verranno. Uscendo vacilla passato su lo ed divieto cintura. Veda re orti le viva ebro da su. Chiedete crediate orgoglio ora sul due sofferto. Moglie scorso un subito ad.</li>
+                    <li><span class="links-results links-results-small linkToBeDeveloped">link1</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link2</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link3</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link4</span></li>
+                </ul>
+            </div>
+            <div class="search-result">
+                <ul>
+                    <li class="links-results links-results-big linkToBeDeveloped">Scacciarla sospettoso trascinato uno cambieremo ape incontrato era cancellato</li>
+                    <li>https://www.sconvoltoriconosco.com/pl-pl/ <span class="linkToBeDeveloped">&#9662;</span></li>
+                    <li>Incontrato pensieroso ti tu la ingannaste. Osi intere riluce lancio rimase sfonda hai dal. Mia scarabei chiedete che duchessa verranno. Uscendo vacilla passato su lo ed divieto cintura. Veda re orti le viva ebro da su. Chiedete crediate orgoglio ora sul due sofferto. Moglie scorso un subito ad.</li>
+                    <li><span class="links-results links-results-small linkToBeDeveloped">link1</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link2</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link3</span><span>&middot;</span><span class="links-results links-results-small linkToBeDeveloped">link4</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <footer>
         <div id="footer-top">
