@@ -14,6 +14,14 @@ Started working with Font Awesome, Material Design. Also added git tags for ever
 
 Added autocompleter to input, started working with Vue.js. Also renamed solution.
 
+### Zajecia 5
+
+Added results page, which imitates google search results.
+
+### Zajecia 6
+
+Added Vue.js router to results page.
+
 ### Regards
 
 Kind regards,
