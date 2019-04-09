@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		css_reset.css = css_reset.css
 		Google_results_page.css = Google_results_page.css
 		Google_results_page.html = Google_results_page.html
+		google_results_router.js = google_results_router.js
 		Google_start_page_imitation.css = Google_start_page_imitation.css
 		Google_start_page_imitation.html = Google_start_page_imitation.html
 		shared.css = shared.css
